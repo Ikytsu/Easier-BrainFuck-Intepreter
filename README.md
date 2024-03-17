@@ -27,10 +27,10 @@ All features of brainfuck works in it, it's based on the interpreter i did https
 **$** 
 change the output type, by default it's ascii value but if you change you can print the value
 
-**#c** 
-hashtag with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the hashtag
+**\#c** 
+\# with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the \#
 
-*
+\*
 Create a table of pointer in the pointer if not exists and make it 9 pointers long, if the table of pointer already exists it just increment the table of pointers length of 9 (if you increment, the pointers that you assign will be moved of 9 places)
 
 **()**
