@@ -5,11 +5,11 @@ Easier-BrainFuck is an adaptation of the BrainFuck programming language aimed at
 ## Prerequisites
 
 - Ensure `gcc` and `make` are installed and added to your system's PATH.
-- Alternatively (only for make, you still need to have gcc) , download the provided tar.gz file, extract it, and move the corresponding Makefile to the main folder.
+- Alternatively (only for make, you still need to have gcc) , download the provided folder (choose the correct os) move the corresponding Makefile to the main folder.
 
 ## Compilation
 
-- **First Way**: Download and extract the provided folder, then move the appropriate Makefile to the main folder. Run `make` in the directory.
+- **First Way**: Run `make` in the directory after following the second **Prerequisites**
 - **Second Way**: Compile with `gcc`.
 
 ## Usage
