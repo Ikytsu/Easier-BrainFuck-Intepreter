@@ -27,7 +27,8 @@ All features of brainfuck works in it, it's based on the interpreter i did https
 **$** 
 change the output type, by default it's ascii value but if you change you can print the value
 
-**\#c** 
+**\#c**
+
 \# with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the \#
 
 \*
