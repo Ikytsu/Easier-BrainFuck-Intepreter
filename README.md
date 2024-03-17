@@ -28,7 +28,7 @@ To execute a BrainFuck program, use the following command in the terminal:
 
 - **$**: Switch between ASCII value and printed value.
 - **#**: Assign ASCII value to the current pointer. Use space for a space character and press enter like you wanted to create a line just after the # for '\n'.
-- **\***: Create (of 9 length) or extend a table (by 9) of pointers in the pointer, if you extend it the old values will be moved by 9 (i am gonna fix it later).
+- **\\**: Create (of 9 length) or extend a table (by 9) of pointers in the pointer, if you extend it the old values will be moved by 9 (i am gonna fix it later).
 - **()**: Open a table of pointers within the current pointer, you can create many child as you want like \(\()) etc.
 - **/**: Delete the table of pointers in the pointer and all of his child.
 
