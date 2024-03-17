@@ -24,15 +24,20 @@ You can also Make clear to clear the files you compiled.
 **Features:**
 All features of brainfuck works in it, it's based on the interpreter i did https://github.com/Ikytsu/BrainFuck-Interpreter-in-C, the objective of the programming language is to keep the concept of brainfuck, not many instructions but add some to facilitate programming.
 
-**$** change the output type, by default it's ascii value but if you change you can print the value
+**$** 
+change the output type, by default it's ascii value but if you change you can print the value
 
-**#c** # with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the #
+**#c** 
+# with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the #
 
-*****
+*
+Create a table of pointer in the pointer if not exists and make it 9 pointers long, if the table of pointer already exists it just increment the table of pointers length of 9 (if you increment, the pointers that you assign will be moved of 9 places)
 
 **()**
+open the table of pointer in the pointer, enter whatever you want to do operations on it, note that you can create also a table of pointer in it, and after too, it's recursive
 
 **/**
+Delete the table of pointer in the pointer
 
 **Credits:**
 If you want to edit the code and republish it, leave credits to me
