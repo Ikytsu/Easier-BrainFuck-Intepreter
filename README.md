@@ -1,48 +1,37 @@
 # Easier-BrainFuck
-BrainFuck the programming language that's fucked your brain, was adapted to more complex programs by me. I was fascinated how brainfuck works, so I wanted a sort of brainfuck that you can use easily. The concept still the same :).
 
-**Prerequistes:**
-Must have gcc in PATH and make in PATH, if you are lazy to move it in path, just change the Makefile
+Easier-BrainFuck is an adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts.
 
-**Compilation:**
-First way: To compile the program you must download the tar.gz and extract it. When you are done move the Makefile corresponding to your OS on the main folder.
-Just type make in the directory when you are done.
-Second way: Compile with gcc :)
+## Prerequisites
 
-**Use:**
-To use the program, you only need to type on the terminal:
+- Ensure `gcc` and `make` are installed and added to your system's PATH.
+- Alternatively (only for make, you still need to have gcc) , download the provided tar.gz file, extract it, and move the corresponding Makefile to the main folder.
+
+## Compilation
+
+- **First Way**: Download and extract the provided folder, then move the appropriate Makefile to the main folder. Run `make` in the directory.
+- **Second Way**: Compile with `gcc`.
+
+## Usage
+
+To execute a BrainFuck program, use the following command in the terminal:
+
 ./brainfuck.exe program_name.bf
 
-**Specificities:**
-The interpreter give you the choice between -2 147 483 648 and 2 147 483 647 values, so if you have a problem of performance you can change that.
-It's in default bcs that gives more choices.
-For cursor of pointer it must be between 0 and 30000 included, but you can change also if you need.
+## Specificities
 
-**Make:**
-You can also Make clear to clear the files you compiled.
+- The interpreter allows values between -2,147,483,648 and 2,147,483,647.
+- The default behavior permits a wide range of choices.
+- Pointer cursor values must be between 0 and 30000.
+  
+## Features
 
-**Features:**
-All features of brainfuck works in it, it's based on the interpreter i did https://github.com/Ikytsu/BrainFuck-Interpreter-in-C, the objective of the programming language is to keep the concept of brainfuck, not many instructions but add some to facilitate programming.
+- **Change Output Type**: Switch between ASCII value and printed value.
+- **#**: Assign ASCII value to the current pointer. Use space for a space character and press enter like you wanted to create a line just after the # for '\n'.
+- **\***: Create (of 9 length) or extend a table (by 9) of pointers in the pointer, if you extend it the old values will be moved by 9 (i am gonna fix it later).
+- **()**: Open a table of pointers within the current pointer, you can create many child as you want like \(\()) etc.
+- **/**: Delete the table of pointers in the pointer and all of his child.
 
-**$** 
+## Credits
 
-change the output type, by default it's ascii value but if you change you can print the value
-
-**\#c**
-
-\# with the caracter permit to assign to the actual pointer the ascii value of the character you set, note that you must put the caracter just after that, specials caracters are not supporter, if you want to put space just space after the # and if you want to put a \n just jump a line after the \#
-
-\*
-
-Create a table of pointer in the pointer if not exists and make it 9 pointers long, if the table of pointer already exists it just increment the table of pointers length of 9 (if you increment, the pointers that you assign will be moved of 9 places)
-
-**()**
-
-open the table of pointer in the pointer, enter whatever you want to do operations on it, note that you can create also a table of pointer in it, and after too, it's recursive
-
-**/**
-
-Delete the table of pointer in the pointer
-
-**Credits:**
-If you want to edit the code and republish it, leave credits to me
+If you modify and republish the code, please provide proper credits to me, more informations on the license file.
