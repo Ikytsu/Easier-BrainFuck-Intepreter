@@ -27,7 +27,7 @@ int main(int argc, char * argv[])
                 if(fp == NULL)
                 {
                     fclose(fp);
-                    perror("ERROR FOR READING THE FILE");
+                    perror("\nERROR FOR READING THE FILE\n");
                     return 1;
                 }
                 //if no error in reading the file
@@ -69,7 +69,7 @@ int main(int argc, char * argv[])
         }
         else
         {
-            perror("Please enter a valid file");
+            perror("\nPlease enter a valid file\n");
             return 1;
         }
     }
