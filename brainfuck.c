@@ -176,9 +176,16 @@ void execute(char * code)
             //delete all pointers tables in the pointers
             else if(code[i] == '/')
             {
-                freeallmemory((*cursor_place).pointer_table, (*cursor_place).pointer_table_size);
-                (*cursor_place).pointer_table = NULL;
-                (*cursor_place).pointer_table_size = 0;
+                if((*cursor_place).pointer_table != NULL)
+                {
+                    freeallmemory((*cursor_place).pointer_table, (*cursor_place).pointer_table_size);
+                    (*cursor_place).pointer_table = NULL;
+                    (*cursor_place).pointer_table_size = 0;
+                }
+                else
+                {
+                    fputs("can't delete none table of pointers\n" , stderr);
+                }
             }
             else if(code[i] == '.')
             {
@@ -188,7 +195,7 @@ void execute(char * code)
                 }
                 else
                 {
-                    printf("%d\n", (*cursor_place).value);
+                    printf("%d", (*cursor_place).value);
                 }
             }
             else if(code[i] == ',')
