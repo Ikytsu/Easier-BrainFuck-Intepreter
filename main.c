@@ -43,7 +43,7 @@ int main(int argc, char * argv[])
                     if(!buffer)
                     {
                         fclose(fp);
-                        fputs("memory alloc fails", stderr);
+                        fputs("\nmemory alloc fails\n", stderr);
                         exit(1);
                     }
 
@@ -52,7 +52,7 @@ int main(int argc, char * argv[])
                     {
                         fclose(fp);
                         free(buffer);
-                        fputs("entire read fails",stderr);
+                        fputs("\nentire read fails\n",stderr);
                         exit(1);
                     }
 
@@ -63,7 +63,7 @@ int main(int argc, char * argv[])
             }
             else
             {
-                fputs("The file you provided doesn't have the correct extension (.bf)", stderr);
+                fputs("\nThe file you provided doesn't have the correct extension (.bf)\n", stderr);
             }
             
         }
@@ -75,7 +75,7 @@ int main(int argc, char * argv[])
     }
     else
     {
-        fputs("Please enter a file name", stderr);
+        fputs("\nPlease enter a file name\n", stderr);
         return 1;
     }
     return 0;
