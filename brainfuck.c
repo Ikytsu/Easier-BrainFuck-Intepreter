@@ -103,7 +103,7 @@ void execute(char * code)
             {
                 if(cursor_place == pointer_table || cursor_place == cursor_place->parent->pointer_table)
                 {
-                    fputs("Can't reduce cursor at 0", stderr);
+                    fputs("\nCan't reduce cursor at 0\n", stderr);
                     break;
                 }
                 else
@@ -115,7 +115,7 @@ void execute(char * code)
             {
                 if(cursor_place == pointer_table + 30000)
                 {
-                    fputs("Can't increase cursor at 30000 or max you set", stderr);
+                    fputs("\nCan't increase cursor at 30000 or max you set\n", stderr);
                     break;
                 }
                 else
@@ -124,7 +124,7 @@ void execute(char * code)
                     int Numberadded = cursor_place->parent->pointer_table_size;
                     if(cursor_place == pointer_table2 + Numberadded - 1)
                     {
-                        fputs("Can't increase cursor at 30000 or max you set", stderr);
+                        fputs("\nCan't increase cursor at 30000 or max you set\n", stderr);
                         break;
                     }
                     else
@@ -184,7 +184,7 @@ void execute(char * code)
                 }
                 else
                 {
-                    fputs("\ncan't delete none table of pointers" , stderr);
+                    fputs("\ncan't delete none table of pointers\n" , stderr);
                 }
             }
             else if(code[i] == '.')
@@ -267,7 +267,7 @@ void execute(char * code)
             {
                 if((*cursor_place).pointer_table == NULL)
                 {
-                    fputs("not valid", stderr);
+                    fputs("\nyou must create a table of pointers before opening it\n", stderr);
                     break;
                 }
                 else
@@ -286,6 +286,6 @@ void execute(char * code)
     }
     else
     {
-        fputs("close any declaractions like () or []", stderr);
+        fputs("\nclose any declaractions like () or []\n", stderr);
     }
 }
