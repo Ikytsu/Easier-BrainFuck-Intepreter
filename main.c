@@ -1,9 +1,9 @@
 #include "stdio.h"
-#include "unistd.h"
 #include "stdlib.h"
 #include "string.h"
 #include "stdbool.h"
 #include "brainfuck.h"
+#include "io.h"
 
 int main(int argc, char * argv[])
 {
@@ -11,7 +11,7 @@ int main(int argc, char * argv[])
     if(argv[1] != NULL)
     {
         //verify if file exists
-        if(access(argv[1], F_OK) != -1)
+        if(_access(argv[1], 0) == 0)
         {
             //detect if it's the correct extension
             char *extension = strchr(argv[1], '.');
@@ -20,11 +20,9 @@ int main(int argc, char * argv[])
                 FILE *fp;
                 long lSize;
                 char *buffer;
-
-                fp = fopen(argv[1], "r");
         
                 //if error occur in reading the file
-                if(fp == NULL)
+                if(fopen_s(&fp, argv[1], "r") != 0)
                 {
                     fclose(fp);
                     perror("\nERROR FOR READING THE FILE\n");
