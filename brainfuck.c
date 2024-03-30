@@ -204,7 +204,7 @@ void execute(char * code)
             }
             else if(code[i] == '[')
             {
-                if((*cursor_place).value < 0)
+                if((*cursor_place).value <= 0)
                 {
                     size_t i2 = i + 1;
                     size_t closing_loop; //pos of the closing loop
