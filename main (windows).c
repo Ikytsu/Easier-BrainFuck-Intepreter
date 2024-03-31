@@ -22,7 +22,7 @@ int main(int argc, char * argv[])
                 char *buffer;
         
                 //if error occur in reading the file
-                if(fopen_s(&fp, argv[1], "r") != 0)
+                if(fopen_s(&fp, argv[1], "rb") != 0)
                 {
                     fclose(fp);
                     perror("\nERROR FOR READING THE FILE\n");
