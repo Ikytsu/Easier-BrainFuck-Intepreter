@@ -79,7 +79,7 @@ void execute(char * code)
         //mode d'affichage
         bool ascii = true;
         //execute the code line per line
-        for(; i < size_of_code ; i++)
+        for(; i < size_of_code + 1; i++)
         {
             //give value to the pointer (character)
             if(code[i] == '#')
@@ -209,7 +209,7 @@ void execute(char * code)
                     size_t i2 = i + 1;
                     size_t closing_loop; //pos of the closing loop
                     int stackloop = -1; //stack thing to detect if the other [ is not of another loop in loop
-                    for(; i2 < size_of_code ; i2++)
+                    for(; i2 < size_of_code + 1; i2++)
                     {
                         //printf("%c", code[i2]);
                         if(stackloop != 0)
