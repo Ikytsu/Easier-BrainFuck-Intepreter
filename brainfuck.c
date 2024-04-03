@@ -185,6 +185,7 @@ void execute(char * code)
                 else
                 {
                     fputs("\ncan't delete none table of pointers\n" , stderr);
+                    break;
                 }
             }
             else if(code[i] == '.')
