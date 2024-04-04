@@ -3,20 +3,24 @@
 Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts. The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
 
 ## Prerequisites
+- If you are on windows you can simply install the .exe in releases, but for any other reasons i give you the tutorial.
+
 - main.c is a little bit different depending if you are on linux or windows, make sure to choose the correct one
-- Ensure `gcc` and `make` are installed and added to your system's PATH.
+- Ensure `gcc` or `clang` and `make` (optional) are installed and added to your system's PATH (if you are not on linux)
 - Alternatively (only for make, you still need to have gcc) , download the provided folder (choose the correct os) move the corresponding Makefile to the main folder.
 
 ## Compilation
 
 - **First Way**: Run `make` in the directory after following the second **Prerequisites**. If you want to clear the file of compilation you can run `make clear`, note that it works only if you have gcc in your path
-- **Second Way**: Compile with `gcc`.
+- **Second Way**: Compile with `gcc` or `clang`.
 
 ## Usage
 
 To execute a BrainFuck program, use the following command in the terminal:
 
-./brainfuck.exe program_name.bf
+EasierBrainfuck.exe program_name.bf
+or if it don't work
+.\EasierBrainfuck.exe program_name.bf
 
 ## Specificities
 
