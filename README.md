@@ -34,7 +34,7 @@ or if it don't work
 - **#**: Assign ASCII value to the current pointer. Use space for a space character and press enter like you wanted to create a line just after the # for '\n'.
 - **\\**: Create (of 9 length) or extend a table (by 9) of pointers in the pointer, if you extend it the old values will be moved by 9 (i am gonna fix it later).
 
-`Deprecated, works only with 1.0, changed by \* and &, to permit better loop manipulation`
+`Deprecated, works only with 1.0, changed by * and &, to permit better loop manipulation`
 
 `- **()**: Open a table of pointers within the current pointer, you can create many child as you want like \\(\\()) etc. You are automaticaly set to the first element when you do (), but when you exit the table of pointers so after that ) you 
 come back on the actual element.`
