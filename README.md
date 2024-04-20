@@ -3,7 +3,7 @@
 Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts. The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
 
 ## Prerequisites
-- If you are on windows or linux you can simply install the compiled project, but you can compile it yourself as well (the .exe of the 1.0 was retired bcs antivirus false positive it, so we change of compiler to distribute our binary (clang to gcc))
+- If you are on windows you can simply install the compiled project, but you can compile it yourself as well (the .exe of the 1.0 was retired bcs antivirus false positive it, so we change of compiler to distribute our binary (clang to gcc))
 - main.c is a little bit different depending if you are on linux or windows, make sure to choose the correct one
 - Ensure `gcc` or `clang` and `make` (optional) are installed and added to your system's PATH (if you are not on linux)
 - Alternatively (only for make, you still need to have gcc) , download the provided folder (choose the correct os) move the corresponding Makefile to the main folder.
