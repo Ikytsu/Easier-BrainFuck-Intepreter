@@ -3,7 +3,7 @@
 Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts. The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
 
 ## Prerequisites
-- If you are on windows you can simply install the .exe in releases, but for any other reasons i give you the tutorial.
+- If you are on windows or linux you can simply install the compiled project, but you can compile it yourself as well
 
 - main.c is a little bit different depending if you are on linux or windows, make sure to choose the correct one
 - Ensure `gcc` or `clang` and `make` (optional) are installed and added to your system's PATH (if you are not on linux)
@@ -12,7 +12,7 @@ Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming langu
 ## Compilation
 
 - **First Way**: Run `make` in the directory after following the second **Prerequisites**. If you want to clear the file of compilation you can run `make clear`, note that it works only if you have gcc in your path
-- **Second Way**: Compile with `gcc` or `clang`.
+- **Second Way**: Compile with `gcc` or `clang`. For gcc it's `gcc -o EasierBrainfuck "main (os)" brainfuck.c`
 
 ## Usage
 
@@ -27,6 +27,7 @@ or if it don't work
 - The interpreter allows values between -2,147,483,648 and 2,147,483,647.
 - The default behavior permits a wide range of choices.
 - Pointer cursor values must be between 0 and 30000.
+- The interpreter is made to be already compatible with your normal brainfuck program, just make sure to don't have in commentary the instructions listed here
   
 ## Features
 
