@@ -34,8 +34,6 @@ void execute(char * code)
     //detect if all loops and access to table of pointers are correctly closed
     int openloop_count = 0;
     int closeloop_count = 0;
-    int openpointer_count = 0;
-    int closepointer_count = 0;
     char * code2 = code;
     while(*code2) 
     {
@@ -47,18 +45,10 @@ void execute(char * code)
         {
             closeloop_count++;
         }
-        else if(*code2 == '(')
-        {
-            openpointer_count += 1;
-        }
-        else if(*code2 == ')')
-        {
-            closepointer_count += 1;
-        }
         code2++;
     }
     //if all ( and [ are closed
-    if(openloop_count == closeloop_count && openpointer_count == closepointer_count)
+    if(openloop_count == closeloop_count)
     {
         //allocate memory to our table of pointer
         TablesElements * pointer_table = (TablesElements*) malloc(30000 * sizeof(TablesElements));
@@ -264,7 +254,7 @@ void execute(char * code)
                 }
             }
             //enter in child table
-            else if(code[i] == '(')
+            else if(code[i] == '*')
             {
                 if((*cursor_place).pointer_table == NULL)
                 {
@@ -277,7 +267,7 @@ void execute(char * code)
                 }
             }
             //enter in parent table
-            else if(code[i] == ')')
+            else if(code[i] == '&')
             {
                 cursor_place = (*cursor_place).parent;
             }
