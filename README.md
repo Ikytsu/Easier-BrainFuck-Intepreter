@@ -11,7 +11,7 @@ Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming langu
 
 ## Compilation
 
-- **First Way**: Run `make` in the directory after following the second **Prerequisites**. If you want to clear the file of compilation you can run `make clear`, note that it works only if you have gcc in your path
+- **First Way (don't works with clang)**: Run `make` in the directory after following the second **Prerequisites**. If you want to clear the file of compilation you can run `make clear`, note that it works only if you have gcc in your path
 - **Second Way**: Compile with `gcc` or `clang`. For gcc it's `gcc -o EasierBrainfuck "main (os)" brainfuck.c`
 
 ## Usage
