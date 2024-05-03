@@ -59,6 +59,7 @@ int main(int argc, char * argv[])
                     // close file and execute brainfuck code
                     fclose(fp);
                     execute(buffer);
+                    free(buffer);
                 }
             }
             else
