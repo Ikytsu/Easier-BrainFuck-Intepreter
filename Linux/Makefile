@@ -3,7 +3,7 @@ CFLAGS=-Wall -Wextra -g
 
 SRC=main.c brainfuck.c
 OBJ=$(SRC:.c=.o)
-EXEC=brainfuck.exe
+EXEC=ebf.exe
 
 all: $(EXEC)
 
