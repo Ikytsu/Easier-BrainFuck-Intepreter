@@ -3,6 +3,7 @@
 #include "string.h"
 #include "stdlib.h"
 #include "stdbool.h"
+#include "limits.h"
 
 //struct to aliment our tables of pointers thing iterative
 typedef struct TablesElements TablesElements;
@@ -63,13 +64,13 @@ void execute(char * code)
             pointer_table[i].pointer_table_size = 0;
             pointer_table[i].parent = pointer_table;
         }
-        //size of code to check it and i for iterations    
+        //size of code to check it and i for iterations
         size_t size_of_code = strlen(code);
         i = 0;
         //mode d'affichage
         bool ascii = true;
         //execute the code line per line
-        for(; i < size_of_code + 1; i++)
+        for(; i < size_of_code; i++)
         {
             //give value to the pointer (character)
             if(code[i] == '#')
@@ -89,47 +90,69 @@ void execute(char * code)
                     ascii = true;
                 }
             }
-            if(code[i] == '<')
+            else if(code[i] == '>' || code[i] == '<')
             {
-                if(cursor_place == pointer_table || cursor_place == cursor_place->parent->pointer_table)
+                int result = 0;
+                for(; i < size_of_code; i++)
                 {
-                    fputs("\nCan't reduce cursor at 0\n", stderr);
-                    break;
+                    if(code[i] == '>')
+                    {
+                        result++;
+                    }
+                    else if(code[i] == '<')
+                    {
+                        result--;
+                    }
+                    else
+                    {
+                        i--;
+                        break;
+                    }
                 }
-                else
+
+                if((*cursor_place).parent == &pointer_table)
                 {
-                    cursor_place--;
-                }
-            }
-            else if(code[i] == '>')
-            {
-                if(cursor_place == pointer_table + 30000)
-                {
-                    fputs("\nCan't increase cursor at 30000 or max you set\n", stderr);
-                    break;
+                    if(cursor_place + result > pointer_table + 30000 || cursor_place + result < pointer_table)
+                    {
+                        fputs("\nThe cursor exceed the max global pointer table value\n", stderr);
+                        break;
+                    }
                 }
                 else
                 {
                     TablesElements * pointer_table2 = cursor_place->parent->pointer_table;
                     int Numberadded = cursor_place->parent->pointer_table_size;
-                    if(cursor_place == pointer_table2 + Numberadded - 1)
+                    if(cursor_place + result > pointer_table2 + Numberadded - 1 || cursor_place + result < cursor_place->parent->pointer_table)
                     {
-                        fputs("\nCan't increase cursor at 30000 or max you set\n", stderr);
+                        fputs("\nThe cursor exceed the max local pointer table value\n", stderr);
                         break;
                     }
                     else
                     {
-                        cursor_place++;
+                        cursor_place += result;
                     }
                 }
             }
-            else if(code[i] == '+')
+            else if(code[i] == '+' || code[i] == '-')
             {
-                (*cursor_place).value++;
-            }
-            else if(code[i] == '-')
-            {
-                (*cursor_place).value--;
+                int result = 0;
+                for(; i < size_of_code; i++)
+                {
+                    if(code[i] == '+')
+                    {
+                        result++;
+                    }
+                    else if(code[i] == '-')
+                    {
+                        result--;
+                    }
+                    else
+                    {
+                        i--;
+                        break;
+                    }
+                }
+                (*cursor_place).value += result;
             }
             //create table of pointer
             else if(code[i] == '\\')
@@ -195,12 +218,12 @@ void execute(char * code)
             }
             else if(code[i] == '[')
             {
-                if((*cursor_place).value <= 0)
+                if((*cursor_place).value <= 0 || (*cursor_place).value == INT_MAX)
                 {
                     size_t i2 = i + 1;
                     size_t closing_loop; //pos of the closing loop
                     int stackloop = -1; //stack thing to detect if the other [ is not of another loop in loop
-                    for(; i2 < size_of_code + 1; i2++)
+                    for(; i2 < size_of_code; i2++)
                     {
                         //printf("%c", code[i2]);
                         if(stackloop != 0)
@@ -225,7 +248,7 @@ void execute(char * code)
             }
             else if(code[i] == ']')
             {
-                if((*cursor_place).value > 0)
+                if((*cursor_place).value > 0 && (*cursor_place).value != INT_MAX)
                 {
                     size_t i2 = i - 1;
                     size_t opening_loop; //pos of the opening loop
