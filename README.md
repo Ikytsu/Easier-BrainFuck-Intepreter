@@ -16,11 +16,12 @@ Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming langu
 
 ## Usage
 
-To execute a BrainFuck program, use the following command in the terminal:
+To execute a EasierBrainFuck program, use the following command in the terminal:
 
-EasierBrainfuck.exe program_name.bf
-or if it don't work
-.\EasierBrainfuck.exe program_name.bf
+Linux:
+./ebf.exe program_name.bf
+Windows:
+.\ebf.exe program_name.bf
 
 ## Specificities
 
@@ -41,6 +42,7 @@ or if it don't work
 come back on the actual element.`
 - **\***: Enter in the child table of pointer
 - **&**: Enter in the parent table of pointer
+- **\***: Enter in the parent table of pointer
 - **/**: Delete the table of pointers in the pointer and all of his child.
 
 ## Credits
