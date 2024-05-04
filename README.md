@@ -42,7 +42,6 @@ Windows:
 come back on the actual element.`
 - **\***: Enter in the child table of pointer
 - **&**: Enter in the parent table of pointer
-- **\***: Enter in the parent table of pointer
 - **/**: Delete the table of pointers in the pointer and all of his child.
 
 ## Credits
