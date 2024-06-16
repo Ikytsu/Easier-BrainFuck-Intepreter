@@ -1,6 +1,6 @@
 # Easier-BrainFuck
 
-Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts. The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
+Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts, easier because of more possibility not more simplicity, abstraction is needed! The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
 
 ## Prerequisites
 - If you are on windows or linux you can simply install in the release, continue if you want to compile it
