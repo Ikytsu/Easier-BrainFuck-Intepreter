@@ -1,5 +1,4 @@
-# Will be discontinued soon to be replaced by https://github.com/Ikytsu/Easier-BF
-
+# Will be discontinued soon
 # Easier-BrainFuck
 
 Easier-BrainFuck is an interpreted adaptation of the BrainFuck programming language aimed at simplifying its usage while retaining its core concepts, easier because of more possibility not more simplicity, abstraction is needed! The interpreter is based on my interpreter for brainfuck: https://github.com/Ikytsu/BrainFuck-Interpreter-in-C
